@@ -1,3 +1,4 @@
+Sys.setlocale("LC_TIME","C")
 Dataset<- read.table("./household_power_consumption.txt", header = TRUE, sep= ";",dec=".")
 subsetDate<-Dataset[Dataset$Date %in% c("1/2/2007","2/2/2007"),]
 Globalactivepower<-as.numeric(subsetDate$Global_active_power)
